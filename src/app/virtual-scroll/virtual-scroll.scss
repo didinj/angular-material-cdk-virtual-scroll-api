@@ -1,0 +1,46 @@
+.example-viewport {
+  height: 400px;
+  /* fixed height for scroll */
+  width: 100%;
+  /* responsive width */
+  border: 1px solid #ddd;
+  /* subtle border */
+  border-radius: 8px;
+  overflow: auto;
+  /* enable scrolling */
+  background-color: #fafafa;
+}
+
+.example-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  /* matches itemSize */
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  color: #333;
+}
+
+mat-card {
+  margin: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+.example-item:hover mat-card {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .example-viewport {
+    height: 300px;
+  }
+}

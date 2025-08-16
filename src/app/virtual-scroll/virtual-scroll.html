@@ -1,0 +1,27 @@
+<cdk-virtual-scroll-viewport itemSize="120" class="example-viewport">
+  <div *cdkVirtualFor="let item of items" class="example-item">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Item {{ item }}</mat-card-title>
+        <mat-card-subtitle>Subtitle {{ item }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          This is a sample card content for item number {{ item }}. You can add text, images, or any
+          Angular Material components here.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</cdk-virtual-scroll-viewport>
+
+<cdk-virtual-scroll-viewport itemSize="60" class="example-viewport">
+  <mat-list>
+    <mat-list-item *cdkVirtualFor="let item of items">
+      <mat-icon matListIcon>person</mat-icon>
+      <div matLine>{{ item }}</div>
+      <div matLine class="secondary">Email: {{ item }}</div>
+    </mat-list-item>
+  </mat-list>
+</cdk-virtual-scroll-viewport>
